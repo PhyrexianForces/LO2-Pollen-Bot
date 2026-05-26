@@ -11,7 +11,9 @@ import java.lang.Math;
 @TeleOp
 public class Riley extends OpMode{
   private DcMotorEx frontLeft, frontRight, backLeft, backRight, intakeMotor;
-
+  //Slowdown variable
+  pulbic double slowDown = 0.5;
+  
   @Override
   public void init() {
     frontLeft = hardwareMap.get(DcMotorEx.class, "fl");
@@ -45,9 +47,6 @@ public class Riley extends OpMode{
     double blPower = (y - x + rx) / maxValue;
     double frPower = (y - x - rx) / maxValue;
     double brPower = (y + x - rx) / maxValue;
-
-    //Slowdown variable
-    double slowDown = 0.5;
 
     frontLeft.setVelocity(slowDown * (flPower * MTPS));
     frontRight.setVelocity(slowDown * (frPower * MTPS));
