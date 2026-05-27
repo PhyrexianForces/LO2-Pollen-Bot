@@ -62,15 +62,15 @@ public class Riley extends OpMode{
     double y = -gamepad1.left_stick_y;
     double x = gamepad1.left_stick_x;
     double rx = gamepad1.right_stick_x;
-    driveOmni(y, rx, x);
-    if (gamepad1.a) {
-      intakeMotor.setVelocity(1)
-    }
     if (gamepad1.b) {
       slowDown = 0.05;
       telemetry.output("Testing...Slowing down")
     } else {
       slowDown = 0.5;
+    }
+    driveOmni(y, rx, x);
+    if (gamepad1.a) {
+      intakeMotor.setVelocity(1)
     }
    }
 }
