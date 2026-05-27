@@ -67,7 +67,8 @@ public class Riley extends OpMode{
       intakeMotor.setVelocity(1)
     }
     if (gamepad1.b) {
-      slowDown = 0.25;
+      slowDown = 0.05;
+      telemetry.output("Testing...Slowing down")
     } else {
       slowDown = 0.5;
     }
