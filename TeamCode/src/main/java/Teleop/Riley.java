@@ -12,7 +12,7 @@ import java.lang.Math;
 public class Riley extends OpMode{
   private DcMotorEx frontLeft, frontRight, backLeft, backRight, intakeMotor;
   //Slowdown variable
-  pulbic double slowDown = 0.5;
+  public double slowDown = 0.5;
   
   @Override
   public void init() {
